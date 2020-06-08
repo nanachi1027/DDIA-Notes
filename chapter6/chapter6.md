@@ -173,6 +173,7 @@ The process of moving load from one node to another in the cluster(system) is ca
 > Database(cluster/system)'s services shouldn't be affected during rebalancing period; 
 > Data migration among nodes during rebalancing should be kept as small as possible in case of casuing huge I/o load among netowkr and disks;
 ```
+
 ##### Strategies
 
 * How many strategies can be used in rebalancing ?
@@ -183,12 +184,70 @@ The process of moving load from one node to another in the cluster(system) is ca
 * Paritioning proportionally to nodes
 ```
 
-* Why we don't just use mod operations in hash mod N ?
+##### Hash mod N 
+* Can you explain how hash mod N rebalancing strategies works in the system?
+```
 
+```
+
+* Why we just directly use key mod N which the key is the key of (k, v) record and the N means the total number of Nodes in the cluster? 
+```
+```
+
+##### Fixed number partition
+* Do you konw in fixed number of partitions rebalancing strategy how partitions and nodes are organized in the system?
+```
+```
+
+* What happens if a node adds to / removes from a cluster if this cluster adopt fixed partition rebalancing strategy?
+```
+```
+
+* What are the pros and cons to use fixed partition rebalancing ?
+```
+```
+
+* How fixed partition relbancing strategy deal with the situaiton in which the size of the whole dataset expands too huge or shrinks too small?
+```
+```
+
+
+##### Dynamic partition 
+* Can you explain more details about the dynamic partition rebalancing strategy?
+```
+```
+
+* What happens when a node is added/removed from a cluster which uses the dynamic partition rebalancing strategy?
+```
+
+```
+
+* How does dynamic partition strategy handle the situation in which: size of the dataset becomes too huge or shrink too small ?
+```
+```
+
+* What are the pros and cons when adopt this rebalancing strategy?
+```
+```
+
+##### Partitioning propotionally to nodes
+* Can you tell more details about this rebalancing strategy?
+```
+```
+
+* How cluster which adopt this rebalancing strategy organizes the assocation between partition and nodes ?
+```
+```
+
+* Explain how this rebalancing strategies working when cluster's dataset expands too huge or shrinks too small?
+```
+```
 
 
 ##### Operations 
-* Automatic 
-* Manual 
+* What's the pros and cons of auto rebalancing and rebalancing in manual?
+```
+```
 
+##### Routing Request 
 
